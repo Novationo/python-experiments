@@ -1,12 +1,10 @@
 print('hi bitch')
 
-myBool = True
-myLean = False
+num1 = input("Enter Number:")
+# num1 = int(num1) INTEGERS!
 
-print(myBool)
-
-not myBool
-
-print(myBool)
-# something aaaahhhhhhhhhhhhhhh
-
+# num1 % 2 modulus
+if int(num1) % 2 == 0:
+    print("Even.")
+else:
+    print("Odd.")
