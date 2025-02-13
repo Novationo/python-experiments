@@ -1,0 +1,11 @@
+# sudo code 3 (i give up trying to spell pseudo, this is now a non-windows terminal)
+
+# an array? do they add them together? idk
+stationAvg = (input [ws1 ws2 ws3 ws4 ws5]) / 5
+
+while stationOther > i
+    input stationtemp
+
+
+
+
