@@ -1,4 +1,4 @@
-print('hi bitch')
+print('hi broski')
 
 num1 = input("Enter Number:")
 # num1 = int(num1) INTEGERS!
