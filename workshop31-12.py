@@ -22,3 +22,9 @@ float(input("float input"))
 rounded = float(input("enter a number to round: "))
 print(math.ceil(round))
 
+''' 
+hello world this is a big block, not a single line 
+
+'''
+
+# use ctrl/cmd slash to auto comment
