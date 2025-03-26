@@ -1,34 +1,52 @@
 month = str(input())
 day = int(input())
-# if month == "January":
-#     month = 1
-# if month == "February":
-#     month = 2
 
 if month == "January" or "February" or "March" or "April" or "May" or "June" or "July" or "August" or "September" or "October" or "November" or "December":
-    if day > 0 and day < 31:
+    if day > 0 and day <= 31:
         if month == "January":
-            days = 31 - day
+            days = 0 + day
         elif month == "February":
-            days = 59 - day
+            days = 32 + day
         elif month == "March":
-            days = 90 - day
+            days = 60 + day
         elif month == "April":
-            days = 120 - day
+            days = 91 + day
         elif month == "May":
-            days = 151 - day
+            days = 121 + day
         elif month == "June":
-            days = 181 - day
+            days = 152 + day
         elif month == "July":
-            days = 212 - day
+            days = 182 + day
         elif month == "August":
-            days = 243 - day
+            days = 213 + day
         elif month == "September":
-            days = 273 - day
+            days = 244 + day
+        elif month == "October":
+            days = 274 + day
+        elif month == "November":
+            days = 305 + day
+        elif month == "December":
+            days = 335 + day
+        if 79 <= days <= 171:
+            season = "Spring"
+        elif 172 <= days <= 264: 
+            season = "Summer"
+        elif 265 <= days <= 354:
+            season = "Autumn"
+        elif (355 <= days <= 365) or (1 <= days <= 78):  
+            season = "Winter"
+        else:
+            season = "Invalid"
 
+        print(season)
     else:
         print("Invalid")
 else:
+    print("Invalid")
+
+try:
+    print(season)
+except:
     print("Invalid")
 
 '''
@@ -52,16 +70,3 @@ summer = 162 - 252
 autumn = 253 - 345
 winter = 346 - 69
 '''
-
-
-
-if days >= 70 and days <= 161:
-    season = "spring"
-if days >= 162 and days <= 252:
-    season = "summer"
-if days >= 253 and days <= 345:
-    season = "autumn"
-if days > 0 and days <= 69 and days >= 346 and days <= 365:
-    season = "winter"
-
-print(days, season)

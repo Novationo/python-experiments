@@ -1,1 +1,3 @@
-# mostly containing random things I've created in my CSC1019 class :3
+# mostly containing random things I've created in my intro to CS class
+
+many of the examples are from zybooks labs, hopefully theres no personal information in here.
