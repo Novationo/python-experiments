@@ -21,6 +21,10 @@ if month == "January" or "February" or "March" or "April" or "May" or "June" or 
             days = 181 - day
         elif month == "July":
             days = 212 - day
+        elif month == "August":
+            days = 243 - day
+        elif month == "September":
+            days = 273 - day
 
     else:
         print("Invalid")
