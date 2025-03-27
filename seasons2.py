@@ -1,5 +1,6 @@
 month = str(input())
 day = int(input())
+days = 0
 
 # List of valid months
 valid_months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -34,8 +35,7 @@ if month in valid_months:
                     days = 243 + day
                 elif month == "November":
                     days = 304 + day
-            else:
-                print("Invalid")
+            
         
         # february
         elif month == "February":
