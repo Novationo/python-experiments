@@ -14,3 +14,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# dont use global variables
+b = 10 # this bad, make specific!
