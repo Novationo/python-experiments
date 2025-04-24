@@ -6,18 +6,15 @@ with open('wordleproject/word-bank.csv', newline='') as wordleCSV:
     # making csv a list to call
 def bankCheck():
     # i is to pick a word from dataTable
-    i = int(input("Enter a number between 0 and 2000"))
+    i = int(input("Enter a number between 0 and 2316"))
     while i > 0:
         print("".join(dataTable[i]))
         i = int(input())
 
-# maybe use dataTable.index() to narrow down search
-# how do othe rsearch algorithms work?
 
 def wordInput(x):
     brokeWord = list(userWord)
     print(brokeWord)
-
 
 # use a loop to look for strings that contain a specific letter 
 for letter in dataTable:
@@ -29,3 +26,24 @@ if __name__ == "__main__":
     userWord = str(input("Enter "))
     wordInput(userWord)
     bankCheck()
+
+
+
+
+
+""" enter green letters 
+    enter position of green letter (1-5)
+
+    enter yellow letters
+    enter position of yellow letters (1-5)
+
+    enter grey letters that are not in the word 
+    
+"""
+
+""" grey letters
+
+"""
+
+""" yellow letters
+"""
