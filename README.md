@@ -1,3 +1,5 @@
-# mostly containing random things I've created in my intro to CS class
+# Python Experiemnts
+## A Bunch of random crappy python code (how exciting!)
 
-many of the examples are from zybooks labs, hopefully theres no personal information in here.
+This is a repository for a bunch of my work for my Intro to CS class (aka learning Python).
+Many of the examples are from [Zybooks](https://zybooks.com) labs, I'll push more stuff when I want to.
