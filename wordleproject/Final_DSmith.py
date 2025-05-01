@@ -12,7 +12,7 @@ def clearPrint():
         _ = system('cls')
     else: # for not windows
         _ = system('clear')
-    print(Fore.GREEN + "--- Dylan's Wordle Word Finder ---" + Fore.RESET)
+    print(Fore.GREEN + "--- Dylan's Wordle Word Finder (～￣▽￣)～ ---" + Fore.RESET)
 
 def loadBank(filename):
     with open(filename, 'r', newline='') as f:
@@ -31,8 +31,8 @@ def filterWords(word_bank, green, yellow, gray):
             continue # we dont care about the gray letters
         # Check yellow letters
         yellow_fail = False
-        for i, ys in enumerate(yellow):
-            for y in ys:
+        for i, yellows in enumerate(yellow):
+            for y in yellows:
                 if word[i] == y or y not in word:
                     yellow_fail = True
                     break
@@ -57,8 +57,8 @@ def menu():
         exit()
 
 def main():
-    word_bank = loadBank('wordBank.csv') # change this if the csv file or path isn't right -- copy relative path to the csv file from ide -- make sure to open folder rather than just the .py file
-    green = [None] * 5
+    word_bank = loadBank('wordleproject/wordBank.csv') # change this if the csv file or path isn't right -- copy relative path to the csv file from ide -- make sure to open folder rather than just the .py file
+    green = [''] * 5
     yellow = [set() for i in range(5)]
     gray = set() # making this a set and not a list prevents duplicates
     wordUnknown = True
@@ -74,13 +74,13 @@ def main():
         if len(guess) != 5 or len(feedback) != 5:
             print(Fore.RED + "Invalid input. " + Fore.RESET + "Please enter a 5-letter word and feedback.")
             continue
-        for i, (g_letter, fb) in enumerate(zip(guess, feedback)): # use zip to use both lists at once and use enumerate to get the index
+        for i, (greens, fb) in enumerate(zip(guess, feedback)): # use zip to use both lists at once and use enumerate to get the index
             if fb == 'g':
-                green[i] = g_letter
+                green[i] = greens
             elif fb == 'y':
-                yellow[i].add(g_letter)
+                yellow[i].add(greens)
             elif fb == 'w':
-                gray.add(g_letter)
+                gray.add(greens)
         word_bank = filterWords(word_bank, green, yellow, gray)
         if len(word_bank) == 1:
             clearPrint()
@@ -107,6 +107,7 @@ if __name__ == "__main__":
 
 most of my colorama knowledge came from calc 1 bc of the python projects we did this semester
 https://www.w3schools.com/python/ref_func_zip.asp
+https://www.w3schools.com/python/ref_func_set.asp
 https://www.w3schools.com/python/ref_func_enumerate.asp
 https://docs.python.org/3/library/csv.html
 https://www.geeksforgeeks.org/clear-screen-python/
