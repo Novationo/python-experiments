@@ -1,3 +1,14 @@
-my_str = 'http://reddit.com/r/python'
-protocol = 'http://'
-print(my_str[len(protocol):])
+from os import system, name
+from time import sleep
+
+# if name == 'nt':
+#     _ = system('cls')
+# else:
+#     _ = system('clear')
+
+
+print('hello geeks\n'*10)
+
+sleep(3)
+
+print('hello world\n'*10)
