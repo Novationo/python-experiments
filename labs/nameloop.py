@@ -1,11 +1,11 @@
 names = []
 adding = True
 while adding:
-    name = input()
+    name = input("Enter name, press 'q' to quit: ")
     if name == "q":
         adding = False
         break
     else:
         names.append(name)
         names.sort()
-        print(", ".join(names))
+        print("Names:",", ".join(names))
